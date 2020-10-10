@@ -56,7 +56,14 @@ defmodule AwesomeBot.MixProject do
       {:nerves_system_rpi3a, "~> 1.12", runtime: false, targets: :rpi3a},
       {:nerves_system_rpi4, "~> 1.12", runtime: false, targets: :rpi4},
       {:nerves_system_bbb, "~> 2.7", runtime: false, targets: :bbb},
-      {:nerves_system_x86_64, "~> 1.12", runtime: false, targets: :x86_64}
+      {:nerves_system_x86_64, "~> 1.12", runtime: false, targets: :x86_64},
+
+      # Dependencies for AwesomeBot
+      {:httpoison, "~> 1.7"},
+      {:jason, "~> 1.2"},
+      {:oauther, "~> 1.1"},
+      {:extwitter, "~> 0.12.0"},
+      {:quantum, "~> 3.3"}
     ]
   end
 
