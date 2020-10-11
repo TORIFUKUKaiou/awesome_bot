@@ -15,6 +15,8 @@ defmodule AwesomeBot.Application do
         # Children for all targets
         # Starts a worker by calling: AwesomeBot.Worker.start_link(arg)
         # {AwesomeBot.Worker, arg},
+        # This is the new line
+        AwesomeBot.Scheduler
       ] ++ children(target())
 
     Supervisor.start_link(children, opts)
