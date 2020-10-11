@@ -30,9 +30,9 @@ defmodule AwesomeBot.Worker do
     list = AwesomeBot.SearchTwitter.run(last_created_at)
     AwesomeBot.Slack.run(list)
 
-    case Enum.count(list) do
-      0 -> last_created_at
-      _ -> Enum.at(list, -1) |> Map.get(:created_at)
+    case Enum.empty?(list) do
+      true -> last_created_at
+      false -> Enum.at(list, -1) |> Map.get(:created_at)
     end
   end
 
