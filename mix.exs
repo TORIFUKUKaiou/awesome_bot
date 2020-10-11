@@ -63,6 +63,7 @@ defmodule AwesomeBot.MixProject do
       {:jason, "~> 1.2"},
       {:oauther, "~> 1.1"},
       {:extwitter, "~> 0.12.0"},
+      {:timex, "~> 3.6"},
       {:quantum, "~> 3.3"}
     ]
   end

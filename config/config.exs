@@ -20,6 +20,8 @@ config :extwitter, :oauth,
   access_token: System.get_env("AWESOME_BOT_TWITTER_ACCESS_TOKEN"),
   access_token_secret: System.get_env("AWESOME_BOT_TWITTER_ACCESS_TOKEN_SECRET")
 
+config :tzdata, :data_dir, "/root/tzdata"
+
 config :awesome_bot, AwesomeBot.Scheduler,
   jobs: [
     {"0 22 * * *", {AwesomeBot.Alarm, :run, ["おはようございます。朝ですよ。", 3]}}
