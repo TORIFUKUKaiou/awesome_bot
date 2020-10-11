@@ -20,6 +20,11 @@ config :extwitter, :oauth,
   access_token: System.get_env("AWESOME_BOT_TWITTER_ACCESS_TOKEN"),
   access_token_secret: System.get_env("AWESOME_BOT_TWITTER_ACCESS_TOKEN_SECRET")
 
+config :awesome_bot, AwesomeBot.Scheduler,
+  jobs: [
+    {"0 22 * * *", {AwesomeBot.Alarm, :run, ["おはようございます。朝ですよ。", 3]}}
+  ]
+
 # Customize non-Elixir parts of the firmware. See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.
 
