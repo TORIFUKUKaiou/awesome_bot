@@ -30,3 +30,19 @@ To start your Nerves app:
   * Forum: https://elixirforum.com/c/nerves-forum
   * Discussion Slack elixir-lang #nerves ([Invite](https://elixir-slackin.herokuapp.com/))
   * Source: https://github.com/nerves-project/nerves
+
+** environment variables
+
+```
+export AWESOME_BOT_DOCOMO_TEXT_TO_SPEECH_API_KEY="secret"
+export AWESOME_BOT_TWITTER_QUERY="NervesJP OR @NervesConf OR @NervesProject OR (Elixir AND Nerves) OR (Elixir AND IoT) -RT"
+export AWESOME_BOT_TWITTER_SEARCH_INTERVAL="300000"
+export AWESOME_BOT_SLACK_INCOMING_WEBHOOK_URL="https://hooks.slack.com/services/..."
+export AWESOME_BOT_SLACK_CHANNEL="notification-awesome"
+export AWESOME_BOT_TWITTER_CONSUMER_KEY="secret"
+export AWESOME_BOT_TWITTER_CONSUMER_SECRET="secret"
+export AWESOME_BOT_TWITTER_ACCESS_TOKEN="secret"
+export AWESOME_BOT_TWITTER_ACCESS_TOKEN_SECRET="secret"
+export AWESOME_BOT_NETWORK_SSID="ssid"
+export AWESOME_BOT_NETWORK_PSK="psk"
+```
