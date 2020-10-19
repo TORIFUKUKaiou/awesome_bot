@@ -3,7 +3,7 @@ defmodule AwesomeBot.Alarm do
                # host
                do: "alarm.wav",
                # target
-               else: "/root/alarm.wav"
+               else: "/tmp/alarm.wav"
   @play_cmd if(AwesomeBot.Application.target() == :host,
               # host
               do: "afplay #{@file_path}",
