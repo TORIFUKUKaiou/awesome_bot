@@ -6,7 +6,11 @@ defmodule AwesomeBot.Alarm do
                else: "/tmp/alarm.wav"
   @play_cmd if(AwesomeBot.Application.target() == :host,
               # host
-              do: "afplay #{@file_path}",
+              do:
+                if(:os.type() == {:unix, :darwin},
+                  do: "afplay #{@file_path}",
+                  else: "aplay -q #{@file_path}"
+                ),
               # target
               else: "aplay -q #{@file_path}"
             )
