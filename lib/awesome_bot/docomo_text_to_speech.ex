@@ -28,9 +28,9 @@ defmodule AwesomeBot.DocomoTextToSpeech do
 
   defp handle_response(_), do: :error
 
-  defp camelize(key) when key == "speaker_id", do: "SpeakerID"
+  defp camelize("speaker_id"), do: "SpeakerID"
 
-  defp camelize(key) when key == "style_id", do: "StyleID"
+  defp camelize("style_id"), do: "StyleID"
 
   defp camelize(key), do: Macro.camelize(key)
 end
